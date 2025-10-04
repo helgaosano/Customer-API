@@ -23,8 +23,8 @@ REST API for Customer entity (id, first name, last name, national ID, phone, ema
 
 1. Backend Technology
 
-  - Java 17+
-  - Spring Boot
+  - Spring Boot Framework
+  - Dependencies
   - Spring Data JPA
   - MySQL Database
 
