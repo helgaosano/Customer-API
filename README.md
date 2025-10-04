@@ -20,15 +20,14 @@ REST API for Customer entity (id, first name, last name, national ID, phone, ema
 
   * Postman API testing is also incorporated
 
-
-1. Backend Technology
+### Backend Technology
 
   - Spring Boot Framework
   - Dependencies
   - Spring Data JPA
   - MySQL Database
 
-2. Frontend Technology
+### Frontend Technology
 
   - React
   - Axios (for API calls)
