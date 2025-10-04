@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/customers")
+@CrossOrigin(origins = "http://localhost:*")
 public class CustomerController {
 
     private static final Logger logger = LoggerFactory.getLogger(CustomerController.class);
@@ -37,14 +38,14 @@ public class CustomerController {
     }
 
     // Get all customers
-    @GetMapping
+    @GetMapping("/all")
     public List<Customer> getAllCustomers() {
         logger.info("Fetching all customers");
         return customerService.getAllCustomers();
     }
 
     // ---------------- CREATE ----------------
-    @PostMapping
+    @PostMapping("/add")
     public ResponseEntity<Customer> createCustomer(@RequestBody Customer customer) {
         Customer savedCustomer = customerService.saveCustomer(customer);
         logger.info("Created new customer: {}", savedCustomer);
