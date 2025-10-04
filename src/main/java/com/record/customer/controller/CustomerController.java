@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.slf4j.Logger;
 
-import java.util.logging.Logger;
 
 @RestController
 @RequestMapping("/api/customers")
@@ -31,7 +31,7 @@ public class CustomerController {
                     return ResponseEntity.ok(customer);
                 })
                 .orElseGet(() -> {
-                    logger.warning("Customer not found"); // 👈 Logs missing customer
+                    logger.warn("Customer not found"); // 👈 Logs missing customer
                     return ResponseEntity.notFound().build();
                 });
     }

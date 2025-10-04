@@ -1,13 +1,15 @@
 package com.record.customer.model;
 
 
+import jakarta.persistence.Entity;
 import org.springframework.data.annotation.Id;
 
-
+@Entity
 public class Customer {
 
-    @Id
+    @jakarta.persistence.Id
     private Long id;
+
     String firstName;
     String lastName;
     String nationalId;
